@@ -57,4 +57,10 @@ class UrlParser {
       return queryParams?.split("&");
     }
   }
+
+  const urlForm = "/:version/api/:collection/:id"
+  const urlInst = "/6/api/listings/3?sort=desc&limit=10"
   
+  const parser = new UrlParser();
+  
+  parser.parseUrl(urlForm, urlInst);
